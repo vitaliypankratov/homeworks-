@@ -2,11 +2,11 @@ from selenium import webdriver
 from time import sleep
 from selenium.webdriver.common.by import By
 
-driver = webdriver.Chrome()
-driver = webdriver.Firefox()
-
 try:
-# driver.maximize.window()
+    driver = webdriver.Chrome()
+    # driver = webdriver.Firefox()
+
+    # driver.maximize.window()
     driver.get("http://the-internet.herokuapp.com/inputs")
     input_field = driver.find_element(By.TAG_NAME, "input")
     input_field.send_keys("1000")
